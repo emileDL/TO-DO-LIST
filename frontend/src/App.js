@@ -1,10 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ToDoList from "./components/ToDoList";
 
 function App() {
+  const [todos, setTodos] = useState([])
+
+const handleSubmit = () => {}
+
   return (
     <>
-    <div>to do</div>
+<ToDoList todos = {todos}/>  
+<input type="text"
+placeholder="add a todo" />
+<input type="submit" value="add" 
+onClick={handleSubmit}
+/>
+<div>{todos.length} left to do</div>
     </>
   );
 }
