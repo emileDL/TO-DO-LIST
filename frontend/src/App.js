@@ -19,7 +19,7 @@ function App() {
   }, [todos]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const name = todoRef.current.value;
     if (name === "") return;
     console.log(name);
