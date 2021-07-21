@@ -19,7 +19,7 @@ function App() {
   }, [todos]);
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const name = todoRef.current.value;
     if (name === "") return;
     console.log(name);
@@ -37,6 +37,7 @@ function App() {
       <input type="text" placeholder="add a todo" ref={todoRef} />
       <input type="submit" value="add" onClick={handleSubmit} />
       <div>{todos.length} left to do</div>
+
       {/* <div>
 {newTodo.map((e) => {
   return(
